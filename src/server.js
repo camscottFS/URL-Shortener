@@ -5,6 +5,8 @@ var app = express()
 // Port config
 var port = 3000;
 
+app.use(body_parser.json());
+
 // Use prefix of api
 app.use('/api', require('../routes/api.js')(express));
 
