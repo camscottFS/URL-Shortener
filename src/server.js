@@ -11,3 +11,5 @@ app.use('/api', require('../routes/api.js')(express));
 app.listen(port, function(){
   console.log('Server Active on', port);
 });
+
+module.exports = server;
