@@ -10,7 +10,7 @@ app.use(body_parser.json());
 // Use prefix of api
 app.use('/api', require('../routes/api.js')(express));
 
-app.listen(port, function(){
+var server = app.listen(port, function(){
   console.log('Server Active on', port);
 });
 
