@@ -22,7 +22,7 @@ describe('API', function() {
 
   it('/status should returnb specified healthy:true', function (done) {
     request(server)
-      .get('/api/')
+      .get('/api/status')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, {"healthy": true}, done);
