@@ -5,6 +5,7 @@ var app = express()
 // Port config
 var port = 3000;
 
+// Tells the application to use the body_paster.json
 app.use(body_parser.json());
 
 // Use prefix of api
