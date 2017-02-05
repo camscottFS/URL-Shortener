@@ -1,7 +1,7 @@
 module.exports = (express) => {
   const router = express.Router();
 
-  router.post('/status', (req, res) => {
+  router.get('/status', (req, res) => {
     res.json({
       healthy: true,
     })

@@ -18,13 +18,5 @@ module.exports = (express) => {
     })
   });
 
-  router.post('/v1/urls/:url', (req, res) => {
-    url.create(req.body, (err) => {
-      res.status(500).json(err);
-    }, (data) => {
-      res.status(200).json(data);
-    })
-  });
-
   return router;
 }
