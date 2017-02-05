@@ -11,3 +11,24 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
   },
   logging: false,
 });
+
+const url = sequelize.define('url', {
+  id: {
+    type: Sequelize.INTEGER,
+  },
+  short_url: {
+    type: Sequelize.STRING,
+  },
+  long_url: {
+    type: Sequelize.STRING,
+  }
+});
+
+url.hasMany(url, {
+  foreignKey: 'id',
+});
+
+sequelize.sync();
+
+exports.sequelize = sequelize;
+exports.url = url;
