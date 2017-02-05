@@ -13,10 +13,6 @@ const sequelize = new Sequelize('url-shortener', 'root', '', {
 });
 
 const url = sequelize.define('url', {
-  id: {
-    type: Sequelize.INTEGER,
-    primaryKey: true,
-  },
   short_url: {
     type: Sequelize.STRING,
   },
