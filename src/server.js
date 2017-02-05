@@ -1,18 +1,16 @@
-var express = require('express');
-var body_parser = require('body-parser');
-var app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
-// Port config
-var port = 3000;
+const port = process.env.PORT || 3000;
 
-// Tells the application to use the body_paster.json
-app.use(body_parser.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true,
+}));
 
-// Use prefix of api
-app.use('/api', require('../routes/api.js')(express));
+app.use('/', require('../routes')(express));
 
-var server = app.listen(port, function(){
-  console.log('Server Active on', port);
+exports.server = app.listen(port, () => {
+  console.log('Server active on port', port);
 });
-
-module.exports = server;
