@@ -7,6 +7,16 @@
 -- End Points --
 
 POST /api/v1/urls
+Create a shortened URL
+GET /api/v1/urls
+Display all URLS
+GET /api/v1/urls/:id
+Display URL based upon id
+POST /api/v1/urls/:id
+Update URL based upon id
+DELETE  /api/v1/urls/:id
+Delete url based upon id
+
 
 -- Expectations --
 
