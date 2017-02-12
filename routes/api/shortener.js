@@ -7,7 +7,7 @@ const router = express.Router();
   router.get('/v1/urls', (req, res) => {
     url.findAll( (err) => {
       res.status(500).json(err);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "error",
         "msg" : "Could not return all URLs",
@@ -17,7 +17,7 @@ const router = express.Router();
       })
     }, (data) => {
       res.status(200).json(data);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "success",
         "msg" : "Returned all URLs",
@@ -32,7 +32,7 @@ const router = express.Router();
     req.body.id = req.params.id;
     url.find(req.body, (err) => {
       res.status(500).json(err);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "error",
         "msg" : "Could not return URL by id",
@@ -42,7 +42,7 @@ const router = express.Router();
       })
     }, (data) => {
       res.status(200).json(data);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "success",
         "msg" : "Returned URL by id",
@@ -58,7 +58,7 @@ const router = express.Router();
     req.body.id = req.params.id;
     url.destroy(req.body, (err) => {
       res.status(500).json(err);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "error",
         "msg" : "Could not delete URL by id",
@@ -68,7 +68,7 @@ const router = express.Router();
       })
     }, (data) => {
       res.status(200).json(data);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "success",
         "msg" : "Deleted URL based on id",
@@ -84,7 +84,7 @@ const router = express.Router();
     req.body.id = req.params.id;
     url.update(req.body, (err) => {
       res.status(500).json(err);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "error",
         "msg" : "Could not update URL by id",
@@ -94,7 +94,7 @@ const router = express.Router();
       })
     }, (data) => {
       res.status(200).json(data);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "success",
         "msg" : "Updated URL based on id",
@@ -109,7 +109,7 @@ const router = express.Router();
   router.post('/v1/urls/', (req, res) => {
     url.create(req.body, (err) => {
       res.status(500).json(err);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type" : "error",
         "msg" : "Could not create URL",
@@ -119,7 +119,7 @@ const router = express.Router();
       })
     }, (data) => {
       res.status(200).json(data);
-      var body = req.body;
+      let body = req.body;
       log.debug({
         "type": "success",
         "msg": "Created URL",

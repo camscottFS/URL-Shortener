@@ -8,7 +8,6 @@ module.exports = (express) => {
   });
 
   // routes
-
   router.use('/api/', require('./api/shortener')(express));
 
   return router;

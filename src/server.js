@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // logging
-var log = require('../modules/debugger');
+let log = require('../modules/debugger');
 log.debugWarn();
 
 // set server port
