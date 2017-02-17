@@ -5,8 +5,12 @@
 3. Success
 
 Debugger NPM Package
+<<<<<<< HEAD
 
 npm install url-debug
+=======
+1. npm install url-debug
+>>>>>>> origin/master
 
 -- End Points --
 
