@@ -4,6 +4,10 @@
 2. Go to localhost:(port)/api/v1/urls/(enter url here)
 3. Success
 
+Debugger NPM Package
+
+npm install url-debug
+
 -- End Points --
 
 POST /api/v1/urls
