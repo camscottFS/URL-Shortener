@@ -11,15 +11,18 @@ mysql: ^2.13.0,
 sequelize: ^3.30.1,
 dotenv: ^4.0.0,
 supertest: ^3.0.0
+url-debug ^1.0.0
+```
+
+```
+You can install these by using the command:
+$ npm install
 ```
 
 1. Copy and paste the files to your directory.
 2. Go to localhost:(port)/api/v1/urls/(enter url here)
 3. Success
 
-Debugger NPM Package
-=======
-1. npm install url-debug
 
 
 End Points
