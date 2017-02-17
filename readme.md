@@ -1,16 +1,16 @@
--- Installation --
+<<<<<<< HEAD
+Installation
+=======
 
 1. Copy and paste the files to your directory.
 2. Go to localhost:(port)/api/v1/urls/(enter url here)
 3. Success
 
-Debugger NPM Package
 <<<<<<< HEAD
-
-npm install url-debug
+Debugger NPM Package
 =======
 1. npm install url-debug
->>>>>>> origin/master
+
 
 -- End Points --
 
