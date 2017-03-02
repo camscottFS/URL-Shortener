@@ -1,36 +1,19 @@
 {
-  "name": "api",
+  "name": "shurl",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/server.js",
+  "description": "URL Shortener",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/camscottFS/api.git"
+    "url": "git+https://github.com/camscottFS/URL-Shortener.git"
   },
   "author": "Cameron Scott",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/camscottFS/api/issues"
+    "url": "https://github.com/camscottFS/URL-Shortener/issues"
   },
-  "homepage": "https://github.com/camscottFS/api#readme",
-  "dependencies": {
-    "body-parser": "^1.16.0",
-    "chai": "^3.5.0",
-    "debug": "^2.6.0",
-    "express": "^4.14.1",
-    "mysql": "^2.13.0",
-    "pm2": "^2.4.0",
-    "sequelize": "^3.30.1",
-    "supertest": "^3.0.0",
-    "winston": "^2.3.1"
-  },
-  "devDependencies": {
-    "dotenv": "^4.0.0",
-    "eslint": "^3.15.0",
-    "mocha": "^3.2.0",
-    "supertest": "^3.0.0"
-  }
+  "homepage": "https://github.com/camscottFS/URL-Shortener#readme"
 }
