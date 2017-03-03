@@ -1,7 +1,5 @@
 node_modules
 .DS_Store
-*.log
-*.logs
 .env
 .env.json
 out
