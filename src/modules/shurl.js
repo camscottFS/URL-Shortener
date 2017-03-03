@@ -15,7 +15,7 @@ module.exports = (url, res) => {
   let shortened = prefix + hashUrl;
   let data = {
     "url": url.body.url,
-    "tynyUrl": shortUrl
+    "shurl": shortUrl
   }
   res.json({shortUrl: shortUrl});
 }
