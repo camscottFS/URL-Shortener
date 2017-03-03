@@ -9,7 +9,17 @@ Assignment 1: Static API
 const shurl = require('../modules/shurl.js');
 
 module.exports = (express) => {
-  let router = express.Router();
+  const router = express.Router();
+
+  router.get('/status', (req, res) => {
+    res.json({
+      healthy: true,
+    })
+  });
+
+  router.post('/v1/urls', (req, res) => {
+      res.send(short(req, res));
+  });
 
   return router;
 }
