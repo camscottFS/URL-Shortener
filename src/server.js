@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
-// use index directory, require routes
+// use api/v1, require routes/app.js
 app.use('/api/v1', require('./routes/app.js')(express));
 
 exports.server = app.listen(port, () => {

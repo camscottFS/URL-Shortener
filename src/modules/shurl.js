@@ -8,14 +8,16 @@ Assignment 1: Static API
 const crypto = require('crypto');
 
 module.exports = (url, res) => {
+  // set the shortened url prefix
   let prefix = 'shurl.io/';
+  // get the url data
   let hashUrl = url.body.url;
-  let hash = crypto.createHmac('sha256', urlHash).digest('hex');
+  // create the hash
+  let hash = crypto.createHmac('sha256', hashUrl).digest('hex');
+  // shorten the hash length to 7
   hashUrl = hash.substr(0,7);
+  // create the shortened url
   let shortened = prefix + hashUrl;
-  let data = {
-    "url": url.body.url,
-    "shurl": shortUrl
-  }
+  // send the shortened url
   res.json({shortUrl: shortUrl});
 }

@@ -6,7 +6,7 @@ Assignment 1: Static API
 */
 
 // require url shortener
-const shurl = require('../modules/shurl.js');
+const shurl = require('../modules/shurl');
 
 module.exports = (express) => {
   const router = express.Router();
@@ -17,8 +17,8 @@ module.exports = (express) => {
     })
   });
 
-  router.post('/v1/urls', (req, res) => {
-      res.send(short(req, res));
+  router.post('/urls', (req, res) => {
+      res.send(shurl(req, res));
   });
 
   return router;
