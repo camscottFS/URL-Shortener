@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/camscottFS/URL-Shortener/issues"
   },
-  "homepage": "https://github.com/camscottFS/URL-Shortener#readme"
+  "homepage": "https://github.com/camscottFS/URL-Shortener#readme",
+  "dependencies": {
+    "crypto": "0.0.3"
+  }
 }
