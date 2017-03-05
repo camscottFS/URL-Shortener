@@ -6,6 +6,7 @@ Assignment 2: Dynamic API
 */
 
 const crypto = require('crypto');
+const url = require('../models/url');
 
 module.exports = (url, res) => {
   // set the shortened url prefix
@@ -18,6 +19,13 @@ module.exports = (url, res) => {
   hashUrl = hash.substr(0,7);
   // create the shortened url
   let shortened = prefix + hashUrl;
-  // send the shortened url
-  res.json({shortUrl: shortUrl});
+  // create data to send
+  let data = {
+      "url": url.body.url,
+      "tynyUrl": shortened,
+      "shortUrl": hashUrl,
+      "key": url.body.key
+  }
+  // return the data
+  return(data);
 }

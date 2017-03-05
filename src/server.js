@@ -19,7 +19,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 // use api/v1, require routes/app.js
-app.use('/api/v1', require('./routes/app.js')(express));
+app.use('/api/v1', require('./routes/app')(express));
+// use go, require routes/go
+app.use('/go/', require('./routes/go')(express));
 
 exports.server = app.listen(port, () => {
   console.log('Server active on port', port);
