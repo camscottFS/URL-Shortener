@@ -2,7 +2,7 @@
 Cameron Scott
 Deployment of Web Applications
 March 2017
-Assignment 1: Static API
+Assignment 2: Dynamic API
 */
 
 const express = require('express');

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/camscottFS/URL-Shortener#readme",
   "dependencies": {
-    "crypto": "0.0.3"
+    "crypto": "0.0.3",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2"
   }
 }
