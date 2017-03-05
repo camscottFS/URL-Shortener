@@ -60,40 +60,6 @@ Create a JS file called 'db.sql' and save it in your models folder.
 
 Next, create the code that will allow the database connection.
 
-```
-const Sequelize = require('sequelize');
-require('dotenv').config();
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-  host: process.env.DB_HOST,
-  dialect: process.env.DB_SCHEMA,
-  port: process.env.DB_PORT,
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000,
-  },
-  logging: false,
-});
-
-const url = sequelize.define('url', {
-  short_url: {
-    type: Sequelize.STRING,
-  },
-  long_url: {
-    type: Sequelize.STRING,
-  }
-});
-
-url.hasMany(url, {
-  foreignKey: 'id',
-});
-
-sequelize.sync();
-
-exports.sequelize = sequelize;
-exports.url = url;
-```
-
 We are using ```require('dotenv').config();``` which allows us to hide the database configuration. To get this to work you'll need to create a file named '.env' in the main folder and type in your database information.
 
 ```
