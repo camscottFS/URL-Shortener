@@ -7,6 +7,7 @@ Assignment 2: Dynamic API
 
 // require url shortener
 const shurl = require('../modules/shurl');
+const db = require('../models/db');
 
 module.exports = (express) => {
   const router = express.Router();

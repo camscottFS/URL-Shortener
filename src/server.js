@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // server port is 3000
-let port = 3000;
+const port = process.env.PORT || 3000;
 
 // use bodyParser.json and urlencoded
 app.use(bodyParser.json());
