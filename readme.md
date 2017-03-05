@@ -51,6 +51,7 @@ The API will then create a shortened url. An example of the output is shown belo
 {
 	"shortUrl":"shurl.io/8a25389"
 }
+```
 
 ## Database Setup
 
