@@ -24,7 +24,7 @@ module.exports = (express) => {
   });
 
   // read all
-  router.get('/urls', (req, res) => {
+  router.get('/urls/', (req, res) => {
     url.findAll( (err) => {
       res.status(500).json(err);
     }, (data) => {

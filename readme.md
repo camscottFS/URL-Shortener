@@ -2,6 +2,7 @@
 A Node.js URL Shortener
 - [Install] (#install)
 - [Endpoints] (#endpoints)
+- [Routes] (#routes)
 - [How to Use] (#how-to-use)
 
 ## Install
