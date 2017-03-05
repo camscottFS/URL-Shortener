@@ -77,23 +77,29 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 });
 
 const url = sequelize.define('url', {
-  short_url: {
-    type: Sequelize.STRING,
+  id: {
+      type: Sequelize.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
   },
-  long_url: {
-    type: Sequelize.STRING,
+  url: {
+      type: Sequelize.STRING,
+  },
+  shurl: {
+      type: Sequelize.STRING,
+  },
+  shortUrl: {
+      type: Sequelize.STRING,
+  },
+  key: {
+      type: Sequelize.STRING,
   }
-});
-
-url.hasMany(url, {
-  foreignKey: 'id',
 });
 
 sequelize.sync();
 
 exports.sequelize = sequelize;
-exports.url = url;
-```
+exports.url = url;```
 
 We are using ```require('dotenv').config();``` which allows us to hide the database configuration. To get this to work you'll need to create a file named '.env' in the main folder and type in your database information.
 
