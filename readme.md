@@ -99,7 +99,8 @@ const url = sequelize.define('url', {
 sequelize.sync();
 
 exports.sequelize = sequelize;
-exports.url = url;```
+exports.url = url;
+```
 
 We are using ```require('dotenv').config();``` which allows us to hide the database configuration. To get this to work you'll need to create a file named '.env' in the main folder and type in your database information.
 
