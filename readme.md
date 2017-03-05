@@ -60,7 +60,11 @@ Create a JS file called 'db.sql' and save it in your models folder.
 
 Next, create the code that will allow the database connection.
 
-We are using ```require('dotenv').config();``` which allows us to hide the database configuration. To get this to work you'll need to create a file named '.env' in the main folder and type in your database information.
+We are using 
+```
+require('dotenv').config();
+``` 
+which allows us to hide the database configuration. To get this to work you'll need to create a file named '.env' in the main folder and type in your database information.
 
 ```
 DB_NAME=DATABASE NAME
