@@ -1,7 +1,7 @@
 # Shurl
 A Node.js URL Shortener
 - [Install] (#install)
-- [Usage] (#usage)
+- [Usage] (#debug-usage)
 - [Endpoints] (#endpoints)
 - [Routes] (#routes)
 - [How to Use] (#how-to-use)
