@@ -2,7 +2,7 @@
 Cameron Scott
 Deployment of Web Applications
 March 2017
-Assignment 2: Dynamic API
+Assignment 3: Utility Tool
 */
 
 const db = require('./db');
