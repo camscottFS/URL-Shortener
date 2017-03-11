@@ -16,6 +16,7 @@ express: ^4.14.0
 body-parser: ^1.15.2
 sequelizejs: ^3.24.3
 mysql: ^2.11.1
+dotenv: ^4.0.0,
 eslint: ^3.15.0
 eslint-config-airbnb: 14.1.0
 eslint-plugin-import: ^2.2.0
