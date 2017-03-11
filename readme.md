@@ -6,6 +6,7 @@ A Node.js URL Shortener
 - [Routes] (#routes)
 - [How to Use] (#how-to-use)
 - [Database Setup] (#database-setup)
+- [Style Guide] (#style-guide)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
@@ -15,6 +16,11 @@ express: ^4.14.0
 body-parser: ^1.15.2
 sequelizejs: ^3.24.3
 mysql: ^2.11.1
+eslint: ^3.15.0
+eslint-config-airbnb: 14.1.0
+eslint-plugin-import: ^2.2.0
+eslint-plugin-jsx-a11y: ^4.0.0
+eslint-plugin-react: ^6.9.0
 ```
 
 You can install the above packages by using the npm install command:
@@ -162,4 +168,41 @@ Lastly, you'll need to require the file we just created in app.js
 
 ```
 const db = require('../models/db');
+```
+
+## Style Guide
+
+Shurl uses the AirBnB Style Guide. You can find the AirBnB Style Guide [here](https://github.com/airbnb/javascript). To ensure that your code adhere's with AirBnB you'll need an IDE that supports the ESLint plugin. [Atom](https://atom.io) is the recommended IDE.
+
+To install the AirBnB Style Guide you'll need to install the dependencies below:
+
+```
+eslint: ^3.15.0
+eslint-config-airbnb: 14.1.0
+eslint-plugin-import: ^2.2.0
+eslint-plugin-jsx-a11y: ^4.0.0
+eslint-plugin-react: ^6.9.0
+```
+
+You will also need to include a file named '.eslintrc.json' with the following code:
+
+```
+{
+	"env": {
+		"node": true
+	},
+	"extends": "airbnb",
+	"plugins": [
+        "react"
+    ],
+	"rules": {
+		"new-cap": 0,
+		"prefer-template": 0,
+		"global-require": 0
+	},
+	"globals": {
+		"describe": true,
+		"it": true
+	}
+}
 ```
