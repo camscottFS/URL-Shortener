@@ -7,6 +7,7 @@ A Node.js URL Shortener
 - [How to Use] (#how-to-use)
 - [Database Setup] (#database-setup)
 - [Style Guide] (#style-guide)
+- [Unit Tests] (#unit-tests)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
@@ -22,15 +23,13 @@ eslint-config-airbnb: 14.1.0
 eslint-plugin-import: ^2.2.0
 eslint-plugin-jsx-a11y: ^4.0.0
 eslint-plugin-react: ^6.9.0
+mocha: ^3.2.0
 ```
 
 You can install the above packages by using the npm install command:
 
 ```
-$ npm install express --save
-$ npm install body-parser --save
-$ npm install sequelize -- save
-$ npm install mysql --save
+$ npm install 'package' --save
 ```
 
 ## Debug Usage
@@ -207,3 +206,9 @@ You will also need to include a file named '.eslintrc.json' with the following c
 	}
 }
 ```
+
+## Unit Tests
+
+To run a unit test make sure you have ```mocha: ^3.2.0``` installed.
+
+You can run a unit test by typing 'mocha' in the command line after changing your directory to the url-shortener.
