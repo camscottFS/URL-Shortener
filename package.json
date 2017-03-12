@@ -17,9 +17,18 @@
   },
   "homepage": "https://github.com/camscottFS/URL-Shortener#readme",
   "dependencies": {
+    "chai": "^3.5.0",
     "crypto": "0.0.3",
     "dotenv": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
     "mysql": "^2.13.0",
-    "sequelize": "^3.30.2"
+    "sequelize": "^3.30.2",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
   }
 }
