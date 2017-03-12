@@ -109,7 +109,7 @@ class testApp {
     // assign app
     this.app = app;
     // create array of routes to test
-    this.routes = ['/go/' + this.app.id, '/' + this.app.shortUrl, '/go/' + this.app.tynyUrl];
+    this.routes = ['/go/' + this.app.id, '/' + this.app.shortUrl, '/go/' + this.app.shurl];
     // enter forEach to test reqirect routes
     this.routes.forEach((url) => {
       describe('App Routes', () => {
