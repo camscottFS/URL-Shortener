@@ -17,7 +17,8 @@ express: ^4.14.0
 body-parser: ^1.15.2
 sequelizejs: ^3.24.3
 mysql: ^2.11.1
-dotenv: ^4.0.0,
+dotenv: ^4.0.0
+crypto: 0.0.3
 ```
 
 You can install the above packages by using the npm install command:
