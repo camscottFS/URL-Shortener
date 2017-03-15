@@ -54,7 +54,7 @@ npm install shurl-debug --save
 
 The ```.env``` file is located in ```node_modules/shurl-debug/```
 
-To turn off the debugging tool can simply edit the ```.env``` file and change  ```DEBUG = true``` to ```DEBUG = false```:
+To turn off the debugging tool can simply edit the ```.env``` file and change  ```DEBUG = true``` to ```DEBUG = false```
 
 To prevent debug messages from appearing in the console you must change ```DEBUG_CONSOLE = true``` to ```DEBUG_CONSOLE = false```.
 
