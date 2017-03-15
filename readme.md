@@ -91,7 +91,8 @@ The API currently utilizes the following endpoints:
 
 ## Routes
 
-* /go/:shortURL - redirects to the actual url
+* /go:/:id - redirects to the long URL by id
+* /go/:shortURL - redirects to the long URL
 
 
 ## How to Use
