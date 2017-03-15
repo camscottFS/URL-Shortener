@@ -7,7 +7,7 @@ Assignment 5: Unit Tests
 
 const crypto = require('crypto');
 const url = require('../models/url');
-const log = require('../modules/debugger');
+const log = require('shurl-debug');
 
 module.exports = (url, res) => {
   log.msg("URL being shortened:");

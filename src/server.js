@@ -7,7 +7,7 @@ Assignment 5: Unit Tests
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const log = require('./modules/debugger');
+const log = require('shurl-debug');
 const app = express();
 
 // debug warning

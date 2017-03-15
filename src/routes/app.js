@@ -6,7 +6,7 @@ Assignment 5: Unit Tests
 */
 
 const shurl = require('../modules/shurl');
-const log = require('../modules/debugger');
+const log = require('shurl-debug');
 const db = require('../models/db');
 const url = require('../models/url');
 

@@ -7,7 +7,7 @@ Assignment 5: Unit Tests
 
 const db = require('../models/db');
 const url = require('../models/url');
-const log = require('../modules/debugger');
+const log = require('shurl-debug');
 
 module.exports = (express) => {
   const router = express.Router();

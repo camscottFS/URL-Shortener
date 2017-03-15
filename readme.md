@@ -18,12 +18,6 @@ body-parser: ^1.15.2
 sequelizejs: ^3.24.3
 mysql: ^2.11.1
 dotenv: ^4.0.0,
-eslint: ^3.15.0
-eslint-config-airbnb: 14.1.0
-eslint-plugin-import: ^2.2.0
-eslint-plugin-jsx-a11y: ^4.0.0
-eslint-plugin-react: ^6.9.0
-mocha: ^3.2.0
 ```
 
 You can install the above packages by using the npm install command:
@@ -32,25 +26,35 @@ You can install the above packages by using the npm install command:
 $ npm install 'package' --save
 ```
 
+You will also need to install the Dev dependencies.
+
+```
+eslint: ^3.15.0
+eslint-config-airbnb: 14.1.0
+eslint-plugin-import: ^2.2.0
+eslint-plugin-jsx-a11y: ^4.0.0
+eslint-plugin-react: ^6.9.0
+mocha: ^3.2.0
+chai: ^3.5.0
+```
+
+You can install the above packages by using the npm install command:
+
+```
+$ npm install 'package' --save-dev
+```
+
 ## Debug Usage
 
-This application has a built-in debug feature.
-
-To completely enable the debugging tool you'll need to add the following to the '.env' file:
+To install the debugging tool you will need to install it as a package.
 
 ```
-DEBUG = true
-DEBUG_CONSOLE = true
-DEBUG_MSG_LOG = true
+npm install shurl-debug --save
 ```
 
-To turn off the debugging tool you can simple turn the 'true' to a 'false':
+The '.env' file is located in 'node_modules/shurl-debug/'
 
-```
-DEBUG = false
-DEBUG_CONSOLE = true
-DEBUG_MSG_LOG = true
-```
+To turn off the debugging tool can simply edit the '.env' file and change  ```DEBUG = true``` to ```DEBUG = false```:
 
 To prevent debug messages from appearing in the console you must change ```DEBUG_CONSOLE = true``` to ```DEBUG_CONSOLE = false```.
 
