@@ -7,7 +7,7 @@ Assignment 5: Unit Tests
 
 const expect = require('chai').expect;
 const request = require('supertest');
-const log = require('../src/modules/debugger');
+const log = require('shurl-debug');
 const db = require('../src/models/db');
 
 class testApp {
