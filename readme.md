@@ -1,13 +1,13 @@
 # Shurl
 A Node.js URL Shortener
-- [Install] (#install)
-- [Usage] (#debug-usage)
-- [Endpoints] (#endpoints)
-- [Routes] (#routes)
-- [How to Use] (#how-to-use)
-- [Database Setup] (#database-setup)
-- [Style Guide] (#style-guide)
-- [Unit Tests] (#unit-tests)
+- [Install](#install)
+- [Usage](#debug-usage)
+- [Endpoints](#endpoints)
+- [Routes](#routes)
+- [How to Use](#how-to-use)
+- [Database Setup](#database-setup)
+- [Style Guide](#style-guide)
+- [Unit Tests](#unit-tests)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
