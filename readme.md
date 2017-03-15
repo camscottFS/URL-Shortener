@@ -216,4 +216,6 @@ You will also need to include a file named '.eslintrc.json' with the following c
 
 To run a unit test make sure you have ```mocha: ^3.2.0``` installed.
 
-You can run a unit test by typing 'mocha' in the command line after changing your directory to the url-shortener.
+You can run a unit test by typing ```mocha``` in the command line after changing your directory to the url-shortener.
+
+Make sure to shut off your server before running mocha or it will not work.
