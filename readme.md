@@ -52,9 +52,9 @@ To install the debugging tool you will need to install it as a package.
 npm install shurl-debug --save
 ```
 
-The '.env' file is located in 'node_modules/shurl-debug/'
+The ```.env``` file is located in ```node_modules/shurl-debug/```
 
-To turn off the debugging tool can simply edit the '.env' file and change  ```DEBUG = true``` to ```DEBUG = false```:
+To turn off the debugging tool can simply edit the ```.env``` file and change  ```DEBUG = true``` to ```DEBUG = false```:
 
 To prevent debug messages from appearing in the console you must change ```DEBUG_CONSOLE = true``` to ```DEBUG_CONSOLE = false```.
 
@@ -81,7 +81,7 @@ Read URL by ID
 ```
 
 ## Endpoints
-The API currently utiltizes the following endpoints:
+The API currently utilizes the following endpoints:
 * GET - /api/v1/urls - displays all URLs
 * GET - /api/v1/urls/:id - displays URL by ID
 * POST - /api/v1/urls - creates a shortened URL
@@ -157,7 +157,7 @@ exports.sequelize = sequelize;
 exports.url = url;
 ```
 
-We are using ```require('dotenv').config();``` which allows us to hide the database configuration. To get this to work you'll need to create a file named '.env' in the main folder and type in your database information.
+We are using ```require('dotenv').config();``` which allows us to hide the database configuration. To get this to work you'll need to create a file named ```.env``` in the main folder and type in your database information.
 
 ```
 DB_NAME=DATABASE NAME
