@@ -7,8 +7,11 @@ Assignment 5: Unit Tests
 
 const shurl = require('../modules/shurl');
 const log = require('shurl-debug');
-const db = require('../models/db');
 const url = require('../models/url');
+
+// Webhook
+const execFile = require('child_process').execFile;
+const file = '/home/dc/.url/.git/hooks/post-receive.sample';
 
 module.exports = (express) => {
   const router = express.Router();
@@ -22,7 +25,7 @@ module.exports = (express) => {
     log.debug({
       "type" : "success",
       "msg" : "Server status is healthy!",
-      "location" : "app.js on line 15 GET:/status"
+      "location" : "app.js on line 17 GET:/status"
     })
   });
 
@@ -33,7 +36,7 @@ module.exports = (express) => {
       log.debug({
         "type" : "success",
         "msg" : "Server status is healthy!",
-        "location" : "app.js on line 15 GET:/status"
+        "location" : "app.js on line 30 GET:/status"
       })
   });
 
@@ -68,7 +71,7 @@ module.exports = (express) => {
       log.debug({
         "type" : "error",
         "msg" : "Could not read URL by ID",
-        "location" : "app.js on line 65 GET:/urls/:id",
+        "location" : "app.js on line 63 GET:/urls/:id",
         "request" : {body}
       })
     }, (data) => {
@@ -77,7 +80,7 @@ module.exports = (express) => {
       log.debug({
         "type" : "success",
         "msg" : "Read URL by ID",
-        "location" : "app.js on line 65 GET:/urls/:id"
+        "location" : "app.js on line 63 GET:/urls/:id"
       })
     })
   });
@@ -126,6 +129,29 @@ module.exports = (express) => {
         "location" : "app.js on line 115 POST:/urls/:id"
       })
     })
+  });
+
+  // webhook
+  router.post('/', (req, res) => {
+    if(req.body.ref === 'refs/heads/deploy'){
+      log.debug({
+        "type": "success",
+        "msg": "Webhook received",
+        "location": "app.js line 132 POST:/"
+      });
+      const execOptions = {
+        maxBuffer: 1024 * 1024
+      };
+      execFile(file, execOptions, (error, stdout, stderr) => {
+        if(error){
+          log.debug(`Execution error: ${error}`);
+          return;
+        }
+        log.debug(`stdout: ${stdout}`);
+        log.debug(`stderr: ${stderr}`);
+      });
+    }
+    res.status(200).json({"msg": "Data has been received."});
   });
 
   return router;
