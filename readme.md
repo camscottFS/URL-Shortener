@@ -229,6 +229,14 @@ This application uses a feature branch workflow. When creating a new feature for
 
 ## Deployment
 
+Deploying with Heroku requires a file named ```Procfile``` with the following code:
+
+```
+web: node src/server.js
+```
+
+To complete deployment with Heroku you need to promote the staging application to production with the CLI or within the Heroku application page.
+
 To automatically deploy the application you will need to setup a server running Ubuntu.
 
 Add a branch to the repository titled ```deploy```.
