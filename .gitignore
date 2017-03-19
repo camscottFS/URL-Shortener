@@ -4,6 +4,3 @@ node_modules
 .env.json
 out
 build
-logs/
-logs
-*.log
