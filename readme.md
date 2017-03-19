@@ -222,6 +222,10 @@ You can run a unit test by typing ```mocha``` in the command line after changing
 
 Make sure to shut off your server before running mocha or it will not work.
 
+## Workflow
+
+This application uses a feature branch workflow. When creating a new feature for the application you need to create a new branch for that specific feature. Once the feature is complete and passes testing the branch can then be merged into master. Once a feature is merged into the master branch a new release needs to be created before moving on to a new feature. In regards to Heroku you must merge the master branch into release. From there tests will be ran and if the tests pass Heroku will automatically deploy the application to the staging branch.
+
 ## Deployment
 
 To automatically deploy the application you will need to setup a server running Ubuntu.
