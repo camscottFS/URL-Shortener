@@ -53,7 +53,7 @@ To install the debugging tool you will need to install it as a package.
 npm install shurl-debug --save
 ```
 
-The ```.env``` file is located in ```node_modules/shurl-debug/```
+You will need to edit the ```.env``` file located in the root directory of the application.
 
 To turn off the debugging tool can simply edit the ```.env``` file and change  ```DEBUG = true``` to ```DEBUG = false```
 
