@@ -9,6 +9,7 @@ A Node.js URL Shortener
 - [Style Guide](#style-guide)
 - [Unit Tests](#unit-tests)
 - [Deployment](#deployment)
+- [Workflow](#workflow)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
