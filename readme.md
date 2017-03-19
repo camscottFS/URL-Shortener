@@ -257,3 +257,5 @@ Initiating a POST request will respond with this:
 ```
 
 To automatically deploy new versions of the application you need to make changes in your deploy branch and then merge your master branch into your deploy branch.
+
+If you did the above successfully there will be a green check mark to the left of your Webhook on Github stating that the last delivery was successful.
