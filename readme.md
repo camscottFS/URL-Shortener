@@ -8,6 +8,7 @@ A Node.js URL Shortener
 - [Database Setup](#database-setup)
 - [Style Guide](#style-guide)
 - [Unit Tests](#unit-tests)
+- [Deployment](#deployment)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
@@ -220,3 +221,41 @@ To run a unit test make sure you have ```mocha: ^3.2.0``` installed.
 You can run a unit test by typing ```mocha``` in the command line after changing your directory to the url-shortener.
 
 Make sure to shut off your server before running mocha or it will not work.
+
+## Deployment
+
+To automatically deploy the application you will need to setup a server running Ubuntu.
+
+Add a branch to the repository titled ```deploy```.
+
+Next, configure a webhook on GitHub:
+
+```
+Payload URL: <Your URL>:3000/api/v1/
+Content type: application/json
+```
+
+It will not work if your ```Content type:``` is ```application/x-www-form-urlencoded```.
+
+This will give an error on the webhook at first since we have not completed the automatic deployment.
+
+You will then need to add a file called ```post-receive.sample``` within ```.git/hooks/``` with the following information:
+
+```
+#!/bin/bash
+git pull --rebase URL-Shortener deploy
+npm install
+pm2 restart server
+```
+
+This will run a post request. A route within ```app.js``` is listening for this request.
+
+Initiating a POST request will respond with this:
+
+```
+{"msg":"Data has been received."}
+```
+
+To automatically deploy new versions of the application you need to make changes in your deploy branch and then merge your master branch into your deploy branch.
+
+If you did the above successfully there will be a green check mark to the left of your Webhook on Github stating that the last delivery was successful.
