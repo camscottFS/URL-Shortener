@@ -10,6 +10,7 @@ A Node.js URL Shortener
 - [Unit Tests](#unit-tests)
 - [Deployment](#deployment)
 - [Workflow](#workflow)
+- [Version Increaser](#version-increaser)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
@@ -63,25 +64,7 @@ To prevent debug messages from appearing in the console you must change ```DEBUG
 
 To disable logging of the .msg() method you must change ```DEBUG_MSG_LOG = true``` to  ```DEBUG_MSG_LOG = false```.
 
-Below is an example of what you can expect the log to generate when the debugging tool is enabled:
-
-```
-Event at 15:05:19 @ server.js on line 30
-SUCCESS
-Server active on port 3000
-
-Event at 15:05:22 @ app.js on line 15 GET:/status
-SUCCESS
-Server status is healthy!
-
-Event at 15:05:27 @ app.js on line 41 GET:/urls
-SUCCESS
-Read all URLs
-
-Event at 15:06:52 @ app.js on line 65 GET:/urls/:id
-SUCCESS
-Read URL by ID
-```
+Logs are no longer saved as a text file, instead they are sent to the console.
 
 ## Endpoints
 The API currently utilizes the following endpoints:
@@ -272,3 +255,13 @@ Initiating a POST request will respond with this:
 To automatically deploy new versions of the application you need to make changes in your deploy branch and then merge your master branch into your deploy branch.
 
 If you did the above successfully there will be a green check mark to the left of your Webhook on Github stating that the last delivery was successful.
+
+## Version Increaser
+
+This application uses a version increaser.
+
+The version increaser is located in ```src/modules/ver_num_inc.js```.
+
+Gulp uses this file and other dependencies to automate version bumping.
+
+The Gulp file can be found in the root directory of the application as ```gulpfile.js```.
