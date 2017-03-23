@@ -278,6 +278,8 @@ If you did the above successfully there will be a green check mark to the left o
 
 This application uses a version increaser.
 
-The version increaser is located in ```src/modules/ver_num_inc.js```. 
+The version increaser is located in ```src/modules/ver_num_inc.js```.
 
 Gulp uses this file and other dependencies to automate version bumping.
+
+The Gulp file can be found in the root directory of the application as ```gulpfile.js```.
