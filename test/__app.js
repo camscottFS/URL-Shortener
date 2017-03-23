@@ -2,7 +2,7 @@
 Cameron Scott
 Deployment of Web Applications
 March 2017
-Assignment 5: Unit Tests
+Assignment: 10 Automated Version Bumping
 */
 
 const expect = require('chai').expect;
