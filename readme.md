@@ -10,6 +10,7 @@ A Node.js URL Shortener
 - [Unit Tests](#unit-tests)
 - [Deployment](#deployment)
 - [Workflow](#workflow)
+- [Version Increaser](#version-increaser)
 
 ## Install
 To install this application you need to download or clone the repository and install the required packages.
@@ -272,3 +273,11 @@ Initiating a POST request will respond with this:
 To automatically deploy new versions of the application you need to make changes in your deploy branch and then merge your master branch into your deploy branch.
 
 If you did the above successfully there will be a green check mark to the left of your Webhook on Github stating that the last delivery was successful.
+
+## Version Increaser
+
+This application uses a version increaser.
+
+The version increaser is located in ```src/modules/ver_num_inc.js```. 
+
+Gulp uses this file and other dependencies to automate version bumping.
